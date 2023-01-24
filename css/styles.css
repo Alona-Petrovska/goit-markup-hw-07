@@ -208,7 +208,9 @@ p {
    .soc-link:focus {
        background-color: var(--pressed-state);
    }
-   
+   .accent{
+    color: var(--brand-color);
+   }
 }
  @media screen and (max-width:384px) {
     .mobile-menu .soc-list:not(:last-child) {
@@ -238,11 +240,7 @@ p {
     align-items: center;
     justify-content: space-between;
 }
-/* .header>.container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} */
+
 .logo-link {
     padding-top: 24px;
     padding-bottom: 24px;
@@ -417,6 +415,16 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
 
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.main-btn:hover,
+.main-btn:focus {
+    background-color: var(--pressed-state);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.main-btn:active {
+    background-color: var(--pressed-state);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
 .backdrop {
     position: fixed;
     top: 0;
@@ -433,7 +441,7 @@ screen and (min-resolution: 2dppx) and (max-width: 767px) {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 392px;
+    width: calc(100%-30px);
     height: 586px;
     max-height: 80vh;
     overflow: auto;
